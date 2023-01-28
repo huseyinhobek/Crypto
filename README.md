@@ -1,6 +1,10 @@
 # Crypto!
 In my CryptoApp project, which is prepared with MVVM architecture, the main screen includes icons, prices, changes and the name of the cryptocurrency. The "Sort" button located in the top right corner allows sorting according to certain criteria, and the title of the sorted criteria is displayed in the main menu title. When we go to the detail page, the blurred version of the relevant cryptocurrency icon is set as the background. On the detail screen, the price, name, change, highest and lowest values in 24 hours are displayed.
 
+
+https://user-images.githubusercontent.com/111534829/215279264-c62a571a-e6d3-41ed-9639-bdf1501e700e.mov
+
+
 [Simulator Screen Shot - iPhone 14 Pro - 2023-01-28 at 19 54 48](https://user-images.githubusercontent.com/111534829/215278927-6f4b5217-72d0-4a83-b5fe-e2389b138fc0.png)
 ![Simulator Screen Shot - iPhone 14 Pro - 2023-01-28 at 19 54 34](https://user-images.githubusercontent.com/111534829/215278921-c35bb2bc-24a4-45a4-b26f-bc28edf19bd0.png)
 ![Simulator Screen Shot - iPhone 14 Pro - 2023-01-28 at 19 54 59](https://user-images.githubusercontent.com/111534829/215278933-2899035b-7760-4776-9586-cd5ce1efc4bf.png)
