@@ -125,12 +125,11 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5d-qA-obN">
                                     <rect key="frame" x="0.0" y="6" width="100" height="22"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" systemColor="systemTealColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="Q5d-qA-obN" firstAttribute="centerY" secondItem="SaO-1u-wp8" secondAttribute="centerY" id="AIH-dK-UlM"/>
                                 <constraint firstItem="Q5d-qA-obN" firstAttribute="top" secondItem="SaO-1u-wp8" secondAttribute="top" constant="6" id="GYa-uZ-Qhd"/>
@@ -138,14 +137,20 @@
                                 <constraint firstAttribute="trailing" secondItem="Q5d-qA-obN" secondAttribute="trailing" id="fdO-GZ-EHu"/>
                             </constraints>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" title="Sort" id="NFM-oU-TFz">
-                            <connections>
-                                <action selector="barButton:" destination="BYZ-38-t0r" id="QeH-b6-rvp"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="664-9L-dri">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="MM8-aL-WlW">
+                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sort"/>
+                                <connections>
+                                    <action selector="sortButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="USA-G5-w7H"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="barButtonItem" destination="NFM-oU-TFz" id="ZGd-JJ-Oek"/>
+                        <outlet property="rankingList" destination="Q5d-qA-obN" id="cth-rM-Ejv"/>
                         <outlet property="tableView" destination="Fea-7y-G1W" id="qFq-nf-7OL"/>
                     </connections>
                 </viewController>
@@ -168,26 +173,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="$123.4567" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNn-Pf-1rR">
-                                <rect key="frame" x="16" y="137.33333333333334" width="236" height="15.666666666666657"/>
+                                <rect key="frame" x="15.999999999999986" y="137.33333333333334" width="226.66666666666663" height="15.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="+5.15% (+$2.123)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPK-aG-Kpm">
-                                <rect key="frame" x="16" y="161" width="241" height="21"/>
+                                <rect key="frame" x="16.000000000000014" y="161" width="232.33333333333337" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High: $123.456" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJI-zr-Cfa">
-                                <rect key="frame" x="260" y="142" width="117" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="250.66666666666666" y="142" width="126.33333333333334" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low: $123.345" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ6-UM-o4u">
-                                <rect key="frame" x="265" y="161" width="112" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="256.33333333333331" y="161" width="120.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.1025861391" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>

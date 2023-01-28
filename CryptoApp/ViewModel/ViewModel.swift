@@ -10,7 +10,7 @@ import Foundation
 final class MainViewModel {
     
     var cryptoList: DataClass?
-
+    
     private let webService: MainWebServiceAdapter
     
     init(webService: MainWebServiceAdapter) {
@@ -29,7 +29,6 @@ final class MainViewModel {
             case .success(let response):
                 if let coins = response.data {
                     self.cryptoList = coins
-
                 }
                 completionHandler()
             case .failure(let error):

@@ -15,7 +15,7 @@ final class NewsWebService: NewsWebServiceProtocol {
     func fetch<T: Codable>(response: T.Type, with path: CoinAPICall, completion: @escaping (Result<T, Error>) -> Void) {
         let urlRequest = URLRequest(url: path.url)
         let task = URLSession.shared.dataTask(with: urlRequest) { data, _, error in
-
+            
             if let error = error {
                 completion(.failure(error))
                 print("linkden veri gelmedi")
@@ -24,10 +24,8 @@ final class NewsWebService: NewsWebServiceProtocol {
             guard let data = data else {
                 completion(.failure(NetworkError.dataNotFound))
                 return
-    }
-    
-   // func fetch(with path: NewsAPICall, completion: @escaping (Result<Welcome, Error>) -> Void) {
-      
+            }
+            
             let decoder = JSONDecoder()
             do {
                 let response = try decoder.decode(T.self, from: data)
@@ -38,7 +36,6 @@ final class NewsWebService: NewsWebServiceProtocol {
         }
         task.resume()
     }
-    
 }
 
 protocol MainWebServiceAdapterProtocol {
@@ -55,11 +52,8 @@ final class MainWebServiceAdapter: MainWebServiceAdapterProtocol {
         webService.fetch(response: Crypto.self, with: .getCoins, completion: completion)
         
     }
-        
+    
 }
-
-
-
 
 enum NetworkError: Error {
     case dataNotFound
